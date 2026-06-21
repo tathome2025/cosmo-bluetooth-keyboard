@@ -15,7 +15,22 @@ the host, no root).
 - `HidService` is a foreground service so the connection survives while you're in
   the editor on the host.
 
-## Build
+## Install (prebuilt APK)
+
+Don't want to build? Grab the ready-to-install APK from
+**[Releases](https://github.com/tathome2025/cosmo-bluetooth-keyboard/releases/latest)**
+and sideload it on the Cosmo:
+
+1. On the Cosmo, open the Releases page above and download
+   `cosmo-bluetooth-keyboard-v1.0.apk`.
+2. Allow **"Install unknown apps"** for your browser / file manager when prompted.
+3. Open the APK to install, then follow **First-run test** below.
+
+> The APK is **debug-signed** (v1+v2+v3 signature schemes, so Android 9's
+> sideload installer accepts it) — it's *not* Play-reviewed. No warranty; use at
+> your own risk.
+
+## Build (from source)
 ```bash
 source .env-android        # JDK 17 + Android SDK
 ./gradlew :app:assembleDebug
